@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>生猪价格</title>
+		<link rel="stylesheet" type="text/css" href="..\static\index.css">
+		<script src="..\static\jquery.min.js"></script>
+		<script src="..\static\echarts.min.js"></script>
+		<script src="..\static\china.js"></script>
+	</head>
+	<body>
+		<div id="title">
+			<h1>生猪价格系统</h1>
+			<div id="t1"></div>
+		</div>
+		<div id="l1">
+			<div class="tex"><h1>外三元</h1></div>
+			<div class="tex"><h1>里三元</h1></div>
+			<div class="tex"><h1>土杂猪</h1></div>
+			<div class="tex"><h1>玉米</h1></div>
+			<div class="tex"><h1>豆粕</h1></div>
+			<div class="num"><h2></h2></div>
+			<div class="num"><h2></h2></div>
+			<div class="num"><h2></h2></div>
+			<div class="num"><h2></h2></div>
+			<div class="num"><h2></h2></div>
+		</div>
+		<div id="l2">
+			<div id="b1"></div>
+			<div id="b2"></div>
+			<div id="main"></div>
+		</div>
+		<div id="r1">
+		<div class="t2"><h2>今日全国部分省市生猪价格</h2></div>
+		{% for item in items %}
+		<button class="shengshi" id='{{item[1]}}'>{{item[0]}}</button>
+		{% endfor %}
+		</div>
+		<div id="r2">
+			<div class="iu"><h>全国猪粮比</h></div>
+			<div class="iu"><h>全国外三元</h></div>
+			<div class="id"></div>
+			<div class="id"></div>
+		</div>
+		<div id="r3"></div>
+		<script src="..\static\ajax.js"></script>
+		<script src="..\static\all_echarts.js"></script>
+	</body>
+</html>
